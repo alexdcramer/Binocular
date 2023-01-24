@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"net.oijon.binocular.server","l":"Connection"},{"p":"net.oijon.binocular.server","l":"Crawler"},{"p":"net.oijon.binocular.server","l":"Log"},{"p":"net.oijon.binocular.server","l":"Main"},{"p":"net.oijon.binocular.server","l":"Tag"},{"p":"net.oijon.binocular.server","l":"Test"}]
