@@ -1,0 +1,51 @@
+@options
+@packages
+-classpath
+'/home/alex/.m2/repository/com/diogonunes/JColor/5.5.1/JColor-5.5.1.jar:/home/alex/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'8'
+-sourcepath
+'/media/alex/Git and Backups/Git/binocular-server/src/main/java:/media/alex/Git and Backups/Git/binocular-server/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/media/alex/Git and Backups/Git/binocular-server/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Binocular Server 0.0.5-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Binocular Server 0.0.5-SNAPSHOT API'
+net.oijon.binocular.server
+/home/alex/.m2/repository/com/diogonunes/JColor/5.5.1/JColor-5.5.1.jar = 1669434300656
+/home/alex/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar = 1674300276621
+/media/alex/Git and Backups/Git/binocular-server/src/main/java = 1674290750183
+/media/alex/Git and Backups/Git/binocular-server/target/generated-sources/annotations = 1674465036875
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/allclasses-index.html = 1674465039795
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/allclasses.html = 1674465039805
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/allpackages-index.html = 1674465039797
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/constant-values.html = 1674465039725
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/deprecated-list.html = 1674465039803
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/element-list = 1674465039689
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/help-doc.html = 1674465039817
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/index-all.html = 1674465039790
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/index.html = 1674465039807
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/jquery-ui.overrides.css = 1674465039838
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/member-search-index.js = 1674465039787
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/member-search-index.zip = 1674465039788
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/overview-tree.html = 1674465039765
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/package-search-index.js = 1674465039784
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/package-search-index.zip = 1674465039786
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/script.js = 1674465039820
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/search.js = 1674465039821
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/stylesheet.css = 1674465039819
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/type-search-index.js = 1674465039786
+/media/alex/Git and Backups/Git/binocular-server/target/apidocs/type-search-index.zip = 1674465039787
