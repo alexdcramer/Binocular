@@ -10,11 +10,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import net.oijon.utils.logger.Log;
+
 public class Tag {
 
 	File tagFile;
 	ArrayList<URL> linkList = new ArrayList<URL>();
-	Log log = new Log(true);
+	Log log = Main.getLog();
 	String name;
 	
 	

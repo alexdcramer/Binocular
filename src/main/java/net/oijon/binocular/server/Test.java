@@ -7,13 +7,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import net.oijon.utils.logger.Log;
+
 public class Test {
 
 	public static void main(String[] args) {
 		Connection connection = new Connection();
 		connection.start();
 		
-		Log log = new Log();
+		Log log = Main.getLog();
 		
 		Runnable crawlerTimer = new Runnable() {
 			public void run() {

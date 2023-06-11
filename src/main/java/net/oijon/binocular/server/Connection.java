@@ -14,9 +14,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import net.oijon.utils.logger.Log;
+
 public class Connection extends Thread {
 
-	Log log = new Log(true);
+	Log log = Main.getLog();
 	boolean binded = false;
 	
 	
@@ -27,6 +29,16 @@ public class Connection extends Thread {
 	
 	
 	public void run() {
+		
+		/*
+		 * !!! ACHTUNG !!!
+		 * 
+		 * Before doing ANYTHING with cookies, you MUST read CVE-2023-26049.
+		 * Otherwise, you WILL be sorry.
+		 * 
+		 * Also, read CVE-2023-26048 while you're at it.
+		 */
+		
 		while (!binded) {
 			try {
 				ServerSocket serverSock = new ServerSocket(13761);
@@ -65,7 +77,7 @@ public class Connection extends Thread {
 	private String add(String urlString) {
 		String returnString = "Operation successful!";
 		try {
-			Crawler crawler = new Crawler(new URL(urlString));
+			Crawler crawler = Main.getCrawler();
 			crawler.addToReadLater(new URL(urlString));
 		} catch (MalformedURLException e) {
 			log.err("urlString not valid - " + e.toString());

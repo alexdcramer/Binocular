@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.oijon</groupId>
   <artifactId>binocular-server</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.6-SNAPSHOT</version>
   <name>Binocular Server</name>
   <description>A server for a console-based search engine</description>
   <properties>
@@ -21,6 +21,17 @@
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-lang3</artifactId>
 		    <version>3.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		    <version>1.16.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.oijon</groupId>
+			<artifactId>utils</artifactId>
+			<version>1.2.3</version>
 		</dependency>
     </dependencies>
     <build>
