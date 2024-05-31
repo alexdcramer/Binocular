@@ -67,37 +67,46 @@ public class Connection extends Thread {
 				OutputStream os = sock.getOutputStream();
 				
 				boolean found = false;
-								
+				
+				// overrides search and add while html frontend is WIP
 				if (splitRequest[0].equals("/")) {
 					splitRequest[0] = "/index";
-				}
-				
-				for (int i = 0; i < pages.size(); i++) {
-					if (splitRequest[0].equals("/" + pages.get(i).getName())) {
-						found = true;
-						byte[] output; 
-						try {
-							pages.get(i).setInput(splitRequest[1]);
-						} catch (ArrayIndexOutOfBoundsException e) {
-							pages.get(i).setInput("");
+				} else if (splitRequest[0].equals("/add")) {
+					if (splitRequest.length > 1) {
+						os.write(add(splitRequest[1]).getBytes());
+					}
+				} else if (splitRequest[9].equals("/search")) {
+					if (splitRequest.length > 1) {
+						os.write(search(splitRequest[1]).getBytes());
+					}
+				} else {
+					
+					for (int i = 0; i < pages.size(); i++) {
+						if (splitRequest[0].equals("/" + pages.get(i).getName())) {
+							found = true;
+							byte[] output; 
+							try {
+								pages.get(i).setInput(splitRequest[1]);
+							} catch (ArrayIndexOutOfBoundsException e) {
+								pages.get(i).setInput("");
+							}
+							output = pages.get(i).run();
+							os.write(output);
 						}
-						output = pages.get(i).run();
-						os.write(output);
+					}
+					
+					
+					if (!found) {
+						File potentialFile = new File(Page.webdir + splitRequest[0]);
+						if (potentialFile.exists() & !potentialFile.isDirectory()) {
+							Page filePage = new FilePage(potentialFile);
+							os.write(filePage.run());
+						} else {
+							Page notFound = StatusPage.NOTFOUND;
+							os.write(notFound.run());
+						}
 					}
 				}
-				
-				
-				if (!found) {
-					File potentialFile = new File(Page.webdir + splitRequest[0]);
-					if (potentialFile.exists() & !potentialFile.isDirectory()) {
-						Page filePage = new FilePage(potentialFile);
-						os.write(filePage.run());
-					} else {
-						Page notFound = StatusPage.NOTFOUND;
-						os.write(notFound.run());
-					}
-				}
-				
 				serverSock.close();
 				binded = false;
 				

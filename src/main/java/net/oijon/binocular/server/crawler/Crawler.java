@@ -87,6 +87,7 @@ public class Crawler implements Runnable {
 		}
 	}
 	
+	
 	private URL sanitizeURL(URL url) throws MalformedURLException, InvalidURLException {
 		String urlString = url.toString();
 		URL returnURL = url;

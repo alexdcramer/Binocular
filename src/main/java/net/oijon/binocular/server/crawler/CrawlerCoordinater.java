@@ -59,12 +59,23 @@ public class CrawlerCoordinater {
 					}
 					coordinatedReadLater.remove(0);
 				}
-				
 			}
 		};
 		
-		ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+		Runnable listInfo = new Runnable() {
+			
+			@Override
+			public void run() {
+				log.info("Total in coordinated readlater: " + coordinatedReadLater.size());
+				
+				for (int i = 0; i < crawlerList.size(); i++) {
+					log.debug("Total in Crawler " + i + " readlater: " + crawlerList.get(i).readLaterSize());
+				}
+			}
+		};
+		ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
 		executor.scheduleAtFixedRate(crawlerTimer, 0, 1, TimeUnit.SECONDS);
+		executor.scheduleAtFixedRate(listInfo, 0, 30, TimeUnit.SECONDS);
 	}
 	
 	public void add(String add) {
