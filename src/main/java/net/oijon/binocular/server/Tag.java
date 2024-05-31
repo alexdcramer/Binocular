@@ -22,7 +22,11 @@ public class Tag {
 	
 	public Tag(String name) {
 		this.name = name;
-		tagFile = new File(System.getProperty("user.home") + "/Binocular-server/tags/" + name + ".btg");
+		String subdirs = "";		
+		for (int i = 0; i < name.length(); i++) {
+			subdirs += Character.toString(name.charAt(i)) + "/";
+		}
+		tagFile = new File(System.getProperty("user.home") + "/Binocular-server/tags/" + subdirs + name + ".btg");
 		String fileString = tagFile.toString();
 		if (fileString.length() < 256) {
 			if (tagFile.exists()) {

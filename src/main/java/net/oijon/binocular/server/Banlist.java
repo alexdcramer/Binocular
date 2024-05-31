@@ -16,4 +16,8 @@ public class Banlist extends ArrayList<BannedURL> {
 		return false;
 	}
 	
+	public void ban(URL url) {
+		this.add(new BannedURL(url));
+	}
+	
 }

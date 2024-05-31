@@ -1,0 +1,78 @@
+body {
+	text-align: center;
+	align-content: center;
+	background-image: url(background.png);
+	display: grid;
+	padding: 0px;
+	margin: 0px;
+	grid-template-columns: 300px auto auto;
+	grid-template-rows: auto auto;
+   grid-template-areas:
+        "nav nav nav"
+        "head head head"
+        "aside article article";
+}
+header {
+	background-image: url(header.png);
+	margin: 0px;
+	text-align: center;
+	align-content: center;
+	grid-area: head;
+	display: inline-block;
+	border: 20px solid transparent;
+	padding: 15px;
+	border-image: url(border.png) 30 round;
+}
+
+aside {
+	grid-area: aside;
+	text-align: left;
+	align-content: left;
+	background-image: url(aside.png);
+	display: block;
+	border: 20px solid transparent;
+	padding: 15px;
+	border-image: url(border.png) 30 round;
+}
+
+article {
+	padding: 10px;
+	text-align: left;
+	grid-area: article;
+	background-image: url(background.png);
+	border: 20px solid transparent;
+	padding: 15px;
+	border-image: url(border.png) 30 round;
+}
+
+nav {
+	display: flex;
+	background-color: lightgray;
+	grid-area: nav;
+}
+
+nav > a {
+	padding-right: 10px;
+}
+
+#form-blocks {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: space-between;
+	text-align: center;
+}
+
+
+#linklist > li{
+	background-color: lightgray;
+	border: 20px solid transparent;
+	margin: 5px;
+	border-image: url(border.png) 30 round;
+}
+
+#form-blocks > form {
+	align-self: center;
+	padding: 15px;
+}
