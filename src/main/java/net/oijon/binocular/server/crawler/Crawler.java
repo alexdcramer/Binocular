@@ -51,7 +51,6 @@ public class Crawler implements Runnable {
 		} catch (Exception e) {
 			log.warn("[Crawler " + id + "]" + "URL '" + url + "' is invalid - " + e.toString());
 			banlist.ban(url);
-			e.printStackTrace();
 		}
 		isScanning = false;
 		long end = System.nanoTime();

@@ -4,7 +4,7 @@
   <groupId>net.oijon</groupId>
   <artifactId>binocular-server</artifactId>
   <name>Binocular Server</name>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.2.0-SNAPSHOT</version>
   <description>A server for a console-based search engine</description>
   <build>
     <plugins>
